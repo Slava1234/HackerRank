@@ -16,10 +16,6 @@ public class MiniMaxSum {
 			minNumbersArr.add((long)arr[i]);
 			maxNumbersArr.add((long)arr[i]);
 		}
-		
-		System.out.println(maxNumbersArr.stream().mapToLong(v -> v).sum());
-		System.out.println(maxNumbersArr.stream().mapToLong(v -> v).min().getAsLong());
-	
 
 		long minRes = minNumbersArr.stream().mapToLong(v -> v).sum() - minNumbersArr.stream().mapToLong(v -> v).max().getAsLong();
 		long maxRes = maxNumbersArr.stream().mapToLong(v -> v).sum() - maxNumbersArr.stream().mapToLong(v -> v).min().getAsLong();
